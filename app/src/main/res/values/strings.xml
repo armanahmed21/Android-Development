@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">first</string>
+    <string name="app_name">CSE224</string>
+    <string name="title_activity_logg_in">LoggIN</string>
+    <string name="title_activity_calc">calc</string>
 </resources>

@@ -7,36 +7,59 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="Lpu"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat">
+        android:theme="@style/Theme.First">
+        <activity
+            android:name=".calc"
+            android:exported="false"
+            android:label="@string/title_activity_calc"
+            android:theme="@style/Theme.First" />
+        <activity
+            android:name=".LoggIN"
+            android:exported="true"
+            android:label="@string/title_activity_logg_in"
+            android:theme="@style/Theme.First">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PlacementEligibity"
+            android:exported="false" />
+        <activity
+            android:name=".SetAction"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintLeyout"
+            android:exported="false" />
+        <activity
+            android:name=".Task2"
+            android:exported="true" />
+        <activity
+            android:name=".Relative_Layout"
+            android:exported="false" />
+        <activity
+            android:name=".task1"
+            android:exported="true" />
         <activity
             android:name=".login_page"
-            android:exported="true"
-            android:label="Lpu"
-            android:theme="@style/Theme.AppCompat">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity4"
             android:exported="false" />
         <activity
             android:name=".MainActivity3"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"
-
-             />
+            android:exported="false" />
     </application>
 
 </manifest>
