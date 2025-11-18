@@ -37,7 +37,6 @@ class calc : ComponentActivity() {
 }
 @Composable
 fun calculator () {
-    TextField()
     Column(
         modifier = Modifier
             .fillMaxSize()

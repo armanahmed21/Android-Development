@@ -2,6 +2,7 @@ package com.example.first
 
 import android.R.attr.value
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -25,6 +26,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -84,13 +86,27 @@ fun login() {
                 .padding(top = 20.dp),
             horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterHorizontally)
         ) {
+            val context=LocalContext.current
             Button(
-                onClick = { /*TODO*/ }
+                onClick = {
+                    if (email.isEmpty() || password.isEmpty()) {
+                        Toast.makeText(context, "Enter Email and Password", Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                    else if( email=="admin@123" && password=="admin123"){
+                        Toast.makeText(context, "Logged In As Admin", Toast.LENGTH_SHORT).show()
+                    }
+                    else{
+                        Toast.makeText(context, "Logged In", Toast.LENGTH_SHORT).show()
+                    }
+                }
             ) {
                 Text(text = "Log In")
             }
             Button(
-                onClick = { /*TODO*/ }
+                onClick = {
+                    Toast.makeText(context, "Signing In", Toast.LENGTH_SHORT).show()
+                }
             ) {
                 Text(text = "Sign In")
             }
@@ -98,7 +114,7 @@ fun login() {
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun GreetingPreview() {
     FirstTheme {
