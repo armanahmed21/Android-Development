@@ -2,4 +2,6 @@
     <string name="app_name">CSE224</string>
     <string name="title_activity_logg_in">LoggIN</string>
     <string name="title_activity_calc">calc</string>
+    <string name="title_activity_form">Form</string>
+    <string name="title_activity_check_box">CheckBox</string>
 </resources>

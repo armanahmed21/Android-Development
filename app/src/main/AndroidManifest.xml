@@ -12,21 +12,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.First">
         <activity
+            android:name=".CheckBox"
+            android:exported="true"
+            android:label="@string/title_activity_check_box"
+            android:theme="@style/Theme.First">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name=".Form"
+            android:exported="false"
+            android:label="@string/title_activity_form"
+            android:theme="@style/Theme.First"/>
+        <activity
             android:name=".calc"
             android:exported="false"
             android:label="@string/title_activity_calc"
             android:theme="@style/Theme.First" />
         <activity
             android:name=".LoggIN"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_logg_in"
-            android:theme="@style/Theme.First">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.First"></activity>
         <activity
             android:name=".PlacementEligibity"
             android:exported="false" />

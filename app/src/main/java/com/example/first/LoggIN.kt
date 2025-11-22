@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.compose.material3.Button
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -51,6 +52,9 @@ class LoggIN : ComponentActivity() {
 fun login() {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
+    var opt1 by remember { mutableStateOf(false) }
+
+    var context=LocalContext.current
 
     Column(
         modifier = Modifier
@@ -80,6 +84,18 @@ fun login() {
                 .fillMaxWidth()
                 .padding(bottom = 16.dp), visualTransformation = PasswordVisualTransformation()
         )
+        Row(modifier = Modifier.fillMaxWidth()) {
+            Checkbox(opt1, onCheckedChange = { opt1 = it })
+            Text(
+                text = "Remember Me",
+                color = Color.White,
+                modifier = Modifier.padding(top = 12.dp)
+            )
+            if (opt1){
+                Toast.makeText(context, "I will remember    ", Toast.LENGTH_SHORT).show()
+            }
+        }
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
