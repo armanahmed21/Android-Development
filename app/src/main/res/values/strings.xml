@@ -4,4 +4,6 @@
     <string name="title_activity_calc">calc</string>
     <string name="title_activity_form">Form</string>
     <string name="title_activity_check_box">CheckBox</string>
+    <string name="title_activity_radio_btn">RadioBtn</string>
+    <string name="title_activity_box">box</string>
 </resources>

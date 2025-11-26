@@ -12,21 +12,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.First">
         <activity
-            android:name=".CheckBox"
+            android:name=".box"
+            android:exported="false"
+            android:label="@string/title_activity_box"
+            android:theme="@style/Theme.First" />
+        <activity
+            android:name=".RadioBtn"
             android:exported="true"
-            android:label="@string/title_activity_check_box"
+            android:label="@string/title_activity_radio_btn"
             android:theme="@style/Theme.First">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".CheckBox"
+            android:exported="false"
+            android:label="@string/title_activity_check_box"
+            android:theme="@style/Theme.First" />
         <activity
             android:name=".Form"
             android:exported="false"
             android:label="@string/title_activity_form"
-            android:theme="@style/Theme.First"/>
+            android:theme="@style/Theme.First" />
         <activity
             android:name=".calc"
             android:exported="false"
@@ -36,7 +46,7 @@
             android:name=".LoggIN"
             android:exported="false"
             android:label="@string/title_activity_logg_in"
-            android:theme="@style/Theme.First"></activity>
+            android:theme="@style/Theme.First" />
         <activity
             android:name=".PlacementEligibity"
             android:exported="false" />
